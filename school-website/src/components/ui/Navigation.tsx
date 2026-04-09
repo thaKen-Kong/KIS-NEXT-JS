@@ -76,7 +76,7 @@ export function NavigationPanel() {
 
             {/* MOBILE OVERLAY */}
             <div
-                className={`fixed inset-0 bg-black/40 z-40 transition-opacity ${
+                className={`fixed inset-0 z-100 bg-black/40 transition-opacity ${
                     isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                 }`}
                 onClick={() => setIsOpen(false)}

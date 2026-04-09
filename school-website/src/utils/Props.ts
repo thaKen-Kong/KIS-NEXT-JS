@@ -18,3 +18,10 @@ export type LabelType = {
     color? : String,
     weight? : String,
 }
+
+
+export type Properties = {
+    size? : String,
+    shadow_size? : String,
+    color? : String
+}

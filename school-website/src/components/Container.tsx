@@ -1,12 +1,13 @@
 "use client"
 import { Props } from "@/utils/Props";
 import { ReactNode, useState } from "react";
+import { Label } from "./items/Label";
 
 export function PageContainer({custom = "", color = "" ,children, header} : Props) {
     return (
         <>
-            <section className={` ${color} ${custom} mx-auto flex flex-col items-center shadow-lg w-full min-h-screen`}>
-                {header ? (<div></div>) : <></>}
+            <section className={` ${color} ${custom} flex flex-col items-center shadow-lg min-w-full min-h-screen`}>
+                {header ? (<div className=" flex w-full"><Label orientation="center" size={3} text={header}/></div>) : <></>}
                 {children}
             </section>
         </>
