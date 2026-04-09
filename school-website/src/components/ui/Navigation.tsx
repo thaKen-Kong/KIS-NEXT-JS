@@ -84,7 +84,7 @@ export function NavigationPanel() {
 
             {/* MOBILE DRAWER */}
             <div
-                className={`fixed top-0 right-0 h-full w-3/4 max-w-sm bg-white z-50 transform transition-transform duration-300 ${
+                className={`z-100 fixed top-0 right-0 h-full w-3/4 max-w-sm bg-white z-50 transform transition-transform duration-300 ${
                     isOpen ? "translate-x-0" : "translate-x-full"
                 }`}
             >
