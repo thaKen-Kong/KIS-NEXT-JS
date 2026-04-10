@@ -2,7 +2,7 @@
 import { useMemo } from "react";
 
 type Properties = {
-    text?: string,
+    text?: String,
     orientation?: string,
     variantStyle?: string,
     size?: number
@@ -18,7 +18,7 @@ const sizeMap: Record<number, string> = {
 
 function RenderLinedLabel(
     { render_text = "", text_size = 3 }:
-    { text_size?: number, render_text?: string }
+    { text_size?: number, render_text?: String }
 ) {
     const sizeClass = sizeMap[text_size] ?? sizeMap[3];
 
