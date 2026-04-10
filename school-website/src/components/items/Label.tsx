@@ -5,7 +5,8 @@ type Properties = {
     text?: string,
     orientation?: string,
     variantStyle?: string,
-    size?: number
+    size?: number,
+    textColor? : string
 }
 
 const sizeMap: Record<number, string> = {
@@ -36,7 +37,7 @@ function RenderLinedLabel(
 }
 
 export function Label(
-    { text = "", orientation = "center", variantStyle = "", size = 3 }: Properties
+    { text = "", orientation = "center", variantStyle = "", size = 3, textColor = "text-emerald-800"}: Properties
 ) {
     const textAlignment = useMemo(() => {
         switch (orientation) {
@@ -61,7 +62,7 @@ export function Label(
                 />
             ) : (
                 <h2
-                    className={`${textAlignment} px-2 w-full text-emerald-800 text-shadow-lg font-extrabold ${sizeClass}`}
+                    className={`${textAlignment} px-2 w-full ${textColor} text-shadow-lg font-extrabold ${sizeClass}`}
                 >
                     {text}
                 </h2>
