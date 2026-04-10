@@ -6,7 +6,7 @@ export type Props = {
     color? : String,
     padding? : String,
     custom? : String,
-    header? : String,
+    header? : string,
     text? : String,
     variant? : String
 }
