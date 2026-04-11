@@ -3,15 +3,18 @@ import { Props } from "@/utils/Props";
 import { ReactNode, useState, useRef, useEffect } from "react";
 import { Label } from "./items/Label";
 import { GreenOutlinedButton } from "./items/Button";
+import { ScrollReveal } from "./animations";
 
 
 export function PageContainer({custom = "", color = "" ,children, header} : Props) {
     return (
         <>
+        <ScrollReveal>
             <section className={` ${color} ${custom} flex flex-col items-center shadow-lg min-w-full min-h-screen h-auto py-2   `}>
                 {header ? (<div className=" flex w-full"><Label orientation="center" size={3} textColor="text-emerald-800" text={header}/></div>) : <></>}
                 {children}
             </section>
+        </ScrollReveal>
         </>
     )
 }

@@ -3,6 +3,7 @@ import { ReactNode, useEffect, useState } from "react"
 import { Label } from "./Label"
 import { images } from "../../data/images"
 import { GreenOutlinedButton } from "./Button"
+import { PopupWrapper } from "../animations"
 
 type Props = {
     children? : ReactNode,
@@ -97,18 +98,22 @@ export function TwoColumnCard({firstContainerContent, firstContainerLabel, secon
     return (    
         <>
             <div className="flex w-[90%] gap-5 flex-col ">
+                <PopupWrapper>
                 <div className={`${card_stlye}`}>
                     {firstContainerLabel ? <><h2 className="flex w-full text-shadow-lg text-emerald-900 font-extrabold text-[1rem] md:text-[1.5rem]">{firstContainerLabel}</h2></> : <></>}
                     <div className="p-2 w-full h-full flex-1 flex flex-col justify-between text-[0.8rem] md:text-[1rem]">
                         {firstContainerContent}
                     </div>
                 </div>
+                </PopupWrapper>
+                <PopupWrapper>
                 <div className={`${card_stlye}`}>
                     {secondContainerLabel ? <><h2 className="flex w-full text-shadow-lg text-emerald-900 font-extrabold text-[1rem] md:text-[1.5em]">{secondContainerLabel}</h2></> : <></>}
                     <div className="p-2 w-full h-full flex-1 flex flex-col justify-between text-[0.8rem] md:text-[1rem]">
                         {secondContainerContent}
                     </div>
                 </div>
+                </PopupWrapper>
             </div>
         </>
     )
@@ -119,6 +124,7 @@ export function NewsCard({source = images.bg_1.src, title = "NEWS SAMPLE TITLE",
     
     return (
         <>
+        <PopupWrapper>
             <div className="duration-200 hover:-translate-y-1 bg-black w-[100%] rounded-[10px] md:w-[300px] max-h-400px shadow-lg overflow-hidden flex flex-col group">
                 <img src={source} alt={title} className="bg-black opacity-70 w-full h-[200px] object-center object-cover"/>
                 <div className="p-2 flex flex-col gap-2 rounded-t-[20px] bg-white flex-1">
@@ -132,6 +138,7 @@ export function NewsCard({source = images.bg_1.src, title = "NEWS SAMPLE TITLE",
                     <GreenOutlinedButton text="READ MORE" />
                 </div>
             </div>
+        </PopupWrapper>
         </>
     )
 }

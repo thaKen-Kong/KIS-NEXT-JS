@@ -22,9 +22,9 @@ export const navigationItems = [
     label: "WHAT'S NEW?",
     path: "/pages/what-is-new",
     childrens: [
-      { label: "NEWS", path: "/news", element: "" },
-      { label: "UPCOMING EVENTS", path: "/upcoming-events", element: "" },
-      { label: "ANNOUNCEMENTS", path: "/announcements", element: "" },
+      { label: "NEWS", path: "news", element: "" },
+      { label: "UPCOMING EVENTS", path: "upcoming-events", element: "" },
+      { label: "ANNOUNCEMENTS", path: "announcements", element: "" },
     ],
   },
   {
@@ -41,9 +41,9 @@ export const navigationItems = [
     label: "ADMISSION",
     path: "/pages/admission",
     childrens: [
-      { label: "WHY CHOOSE US?", path: "/why-choose-us", element: "" },
-      { label: "REQUIREMENTS", path: "/requirements", element: "" },
-      { label: "ENROLLMENT", path: "/enrollment", element: "" },
+      { label: "WHY CHOOSE US?", path: "why-choose-us", element: "" },
+      { label: "REQUIREMENTS", path: "requirements", element: "" },
+      { label: "ENROLLMENT", path: "enrollment", element: "" },
     ],
   },
   {
