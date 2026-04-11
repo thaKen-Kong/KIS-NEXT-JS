@@ -7,7 +7,10 @@ export function HeroSection() {
         <>
             <PageContainer color="bg-black" custom="relative flex-row items-center justify-center h-screen overflow-hidden">
                 <img src={images.bg_1.src} alt="" className="absolute opacity-30 w-full h-full object-cover object-center"/>
-                <h1 className="text-[8rem] md:text-[15rem] font-extrabold z-10 from-yellow-300 to-green-700 text-transparent bg-clip-text bg-gradient-to-b text-shadow-lg pointer-events-none shadow-black">KIS</h1>
+                <div className="flex-col items-center flex w-auto m-0 p-0">
+                    <p className="text-[1rem] text-white">KAYTITINGA INTEGRATED SCHOOL</p>
+                    <h1 className="text-[8rem] md:text-[15rem] font-extrabold z-10 from-yellow-300 to-green-700 text-transparent bg-clip-text bg-gradient-to-b text-shadow-lg pointer-events-none shadow-black">KIS</h1>
+                </div>
             </PageContainer>
         </>
     )

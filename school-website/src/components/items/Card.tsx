@@ -1,6 +1,8 @@
 "use client"
 import { ReactNode, useEffect, useState } from "react"
 import { Label } from "./Label"
+import { images } from "../../data/images"
+import { GreenOutlinedButton } from "./Button"
 
 type Props = {
     children? : ReactNode,
@@ -61,7 +63,7 @@ export function CardOne() {
 export function VideoCard({source, header}: VideoProps) {
     return (
         <>
-            <CardTemplate custom="rounded" header={header}>
+            <CardTemplate custom="rounded-[10px]" header={header}>
                 <iframe className="w-full" src={source} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </CardTemplate>
         </>
@@ -90,22 +92,44 @@ type TwoColumnProps = {
 
 export function TwoColumnCard({firstContainerContent, firstContainerLabel, secondContainerContent, secondContainerLabel} : TwoColumnProps) {
     
-    const card_stlye = "shadow-lg min-w-[100%] min-h-[200px] md:min-h-[200px] border-x-[5px] border-y-[2px] p-2 rounded-[10px] border-emerald-800 md:min-w-[500px] flex flex-col items-center"
+    const card_stlye = "shadow-lg min-w-[100%] min-h-[200px] md:min-h-[200px] border-x-[5px] border-y-[2px] p-2 rounded-[10px] border-emerald-800 md:min-w-[300px] flex flex-col items-center"
     
     return (    
         <>
             <div className="flex w-[90%] gap-5 flex-col ">
                 <div className={`${card_stlye}`}>
                     {firstContainerLabel ? <><h2 className="flex w-full text-shadow-lg text-emerald-900 font-extrabold text-[1rem] md:text-[1.5rem]">{firstContainerLabel}</h2></> : <></>}
-                    <div className="p-2 w-full h-full">
+                    <div className="p-2 w-full h-full flex-1 flex flex-col justify-between text-[0.8rem] md:text-[1rem]">
                         {firstContainerContent}
                     </div>
                 </div>
                 <div className={`${card_stlye}`}>
                     {secondContainerLabel ? <><h2 className="flex w-full text-shadow-lg text-emerald-900 font-extrabold text-[1rem] md:text-[1.5em]">{secondContainerLabel}</h2></> : <></>}
-                    <div className="p-2 w-full h-full">
-                    {secondContainerContent}
+                    <div className="p-2 w-full h-full flex-1 flex flex-col justify-between text-[0.8rem] md:text-[1rem]">
+                        {secondContainerContent}
                     </div>
+                </div>
+            </div>
+        </>
+    )
+}
+
+export function NewsCard({source = images.bg_1.src, title = "NEWS SAMPLE TITLE", author = "sample author", glimpse = "news content sample"} : {title? : string, source? : string, author? : string, glimpse? : string}) {
+    
+    
+    return (
+        <>
+            <div className="duration-200 hover:-translate-y-1 bg-black w-[100%] rounded-[10px] md:w-[300px] max-h-400px shadow-lg overflow-hidden flex flex-col group">
+                <img src={source} alt={title} className="bg-black opacity-70 w-full h-[200px] object-center object-cover"/>
+                <div className="p-2 flex flex-col gap-2 rounded-t-[20px] bg-white flex-1">
+                    <div className="flex flex-col items-start justify-between">
+                        <h3 className="text-emerald-900 font-extrabold text-[1rem] md:text-[1.1rem] text-shadow-lg text-center">{title}</h3>
+                        <p className="text-[0.75rem] md:text-[0.85rem] text-gray-700 px-3 bg-gray-200 rounded-4xl font-semibold">{author}</p>
+                    </div>
+                    <div className="break-words text-[0.8rem] md:text-[0.9rem] text-gray-700">
+                        {glimpse.slice(0, 100)}
+                    </div>
+                    <GreenOutlinedButton text="READ MORE" />
                 </div>
             </div>
         </>

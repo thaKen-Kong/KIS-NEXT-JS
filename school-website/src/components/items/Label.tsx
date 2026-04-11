@@ -62,7 +62,7 @@ export function Label(
                 />
             ) : (
                 <h2
-                    className={`${textAlignment} px-2 w-full ${textColor} text-shadow-lg font-extrabold ${sizeClass}`}
+                    className={`wrap-break-word ${textAlignment} px-2 w-full ${textColor} text-shadow-lg font-extrabold ${sizeClass}`}
                 >
                     {text}
                 </h2>

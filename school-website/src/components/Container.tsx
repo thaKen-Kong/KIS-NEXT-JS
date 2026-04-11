@@ -14,10 +14,20 @@ export function PageContainer({custom = "", color = "" ,children, header} : Prop
     )
 }
 
-export function WhiteContainer( {children}: {children : ReactNode} ) {
+export function WhiteContainer( {children, custom}: {children? : ReactNode, custom? : string} ) {
     return (
         <>
-            <div className="mx-auto flex p-6 items-center gap-x-4 bg-amber-50 rounded-md">
+            <div className={`${custom} mx-auto flex w-[90%] min-h-100 shadow-lg items-center gap-x-4 bg-white`}>
+                {children}
+            </div>
+        </>
+    );
+}
+
+export function TransulecentContainer( {children, custom, translucense}: {children? : ReactNode, custom? : string, translucense? : number} ) {
+    return (
+        <>
+            <div className={`${custom} bg-black/10 mx-auto flex w-[90%] min-h-100 shadow-lg items-center gap-x-4`}>
                 {children}
             </div>
         </>
