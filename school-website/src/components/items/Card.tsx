@@ -219,9 +219,7 @@ return (
     />
 
     {/* OVERLAY */}
-    <div className="absolute bottom-0 w-full p-2 text-white 
-                    bg-black/20 group-hover:bg-black/50 
-                    transition duration-300">
+    <div className="absolute bottom-0 w-full p-2 text-white  bg-black/20 group-hover:bg-black/50 transition duration-300">
 
       <div className="flex flex-row justify-between items-center">
         <h2 className="font-extrabold">{card_title}</h2>

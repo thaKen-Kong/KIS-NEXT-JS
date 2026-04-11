@@ -8,7 +8,7 @@ export const navigationItems = [
   },
   {
     label: "ABOUT",
-    path: "/about",
+    path: "/pages/about",
     childrens: [
       { label: "HISTORY", path: "history", element: "" },
       { label: "MISSION AND VISION", path: "mission-vision", element: "" },
@@ -20,7 +20,7 @@ export const navigationItems = [
   },
   {
     label: "WHAT'S NEW?",
-    path: "/what-is-new",
+    path: "/pages/what-is-new",
     childrens: [
       { label: "NEWS", path: "/news", element: "" },
       { label: "UPCOMING EVENTS", path: "/upcoming-events", element: "" },
@@ -29,7 +29,7 @@ export const navigationItems = [
   },
   {
     label: "LIFE@KIS",
-    path: "/life-at-kis",
+    path: "/pages/life-at-kis",
     childrens: [
       { label: "JHS", path: "jhs", element: "" },
       { label: "SHS", path: "shs", element: "" },
@@ -39,7 +39,7 @@ export const navigationItems = [
   },
   {
     label: "ADMISSION",
-    path: "/admission",
+    path: "/pages/admission",
     childrens: [
       { label: "WHY CHOOSE US?", path: "/why-choose-us", element: "" },
       { label: "REQUIREMENTS", path: "/requirements", element: "" },
