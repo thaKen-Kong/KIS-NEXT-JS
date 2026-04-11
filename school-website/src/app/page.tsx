@@ -2,6 +2,8 @@ import { HeroSection } from "@/section/HomepageSection/HeroSection";
 import { WhiteContainer, PageContainer } from "../components/Container";
 import { OverviewSection } from "@/section/HomepageSection/OverviewSection";
 import { NewsSection } from "@/section/HomepageSection/NewsSection";
+import { EventSection } from "@/section/HomepageSection/EventsSection";
+import { ExploreMoreSection } from "@/section/HomepageSection/ExploreMoreSection";
 
 
 
@@ -12,6 +14,8 @@ export default function Home() {
       <HeroSection />
       <OverviewSection />
       <NewsSection />
+      <EventSection />
+      <ExploreMoreSection />
     </div>
     </>
   );

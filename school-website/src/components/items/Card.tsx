@@ -135,3 +135,107 @@ export function NewsCard({source = images.bg_1.src, title = "NEWS SAMPLE TITLE",
         </>
     )
 }
+
+
+export function EventCard({
+  source = images.bg_1.src,
+  title = "EVENT TITLE",
+  date = "April 20, 2026",
+  location = "Main Hall",
+  description = "Short event description"
+}: {
+  title?: string,
+  source?: string,
+  date?: string,
+  location?: string,
+  description?: string
+}) {
+
+  return (
+    <div className="duration-200 hover:-translate-y-1 bg-black md:w-[500px] h-[160px] rounded-[10px] shadow-lg overflow-hidden flex flex-row">
+
+      {/* IMAGE */}
+      <img
+        src={source}
+        alt={title}
+        className="w-[30%] h-full object-cover opacity-80"
+      />
+
+      {/* CONTENT */}
+      <div className="p-3 flex flex-col justify-between bg-white flex-1 min-w-0">
+
+        {/* TOP */}
+        <div className="flex flex-col gap-1">
+          <h3 className="text-emerald-900 font-extrabold text-[1rem] md:text-[1.1rem]">
+            {title}
+          </h3>
+
+          <p className="text-[0.75rem] text-gray-600 font-semibold">
+            {date}
+          </p>
+
+          {location && (
+            <p className="text-[0.75rem] text-gray-500">
+              📍 {location}
+            </p>
+          )}
+        </div>
+
+        {/* DESCRIPTION */}
+        {description && (
+          <p className="text-[0.8rem] text-gray-700 line-clamp-2">
+            {description}
+          </p>
+        )}
+
+      </div>
+    </div>
+  );
+}
+
+export function EventInfoCard(
+    {image_source = images.bg_1.src,
+     card_title = "",
+     card_info = "",
+     card_date = "",
+    } 
+    : 
+    {image_source? : string
+     card_title? : string
+     card_info? : string
+     card_date? : string
+    }
+
+) {
+return (
+<>
+  <div className="group flex-shrink-0 relative flex flex-col bg-black rounded-lg w-full md:w-[350px] h-[200px] md:h-[300px] overflow-hidden transition duration-300">
+
+    {/* IMAGE */}
+    <img
+      src={image_source}
+      alt={card_title}
+      className="w-full h-full object-cover object-center opacity-70 transition duration-300 group-hover:scale-110"
+    />
+
+    {/* OVERLAY */}
+    <div className="absolute bottom-0 w-full p-2 text-white 
+                    bg-black/20 group-hover:bg-black/50 
+                    transition duration-300">
+
+      <div className="flex flex-row justify-between items-center">
+        <h2 className="font-extrabold">{card_title}</h2>
+        <h2 className="font-semibold bg-black/50 rounded-full px-2 text-[0.75rem] md:text-[1rem]">
+          WHEN? {card_date}
+        </h2>
+      </div>
+
+      <p className="break-words text-[0.75rem] md:text-[1rem]">
+        {card_info}
+      </p>
+
+    </div>
+  </div>
+</>
+);
+}

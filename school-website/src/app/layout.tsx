@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import icon_img from "../../public/icons/logo.png"
+
 import { HeaderComponent } from "@/components/ui/Header";
 import { NavigationPanel } from "@/components/ui/Navigation";
 import Link from "next/link";
 import { ToTop } from "@/components/items/ToTopButton";
+import { Footer } from "@/components/ui/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,6 +50,8 @@ export default function RootLayout({
             {children}
           </main>
           
+
+          <Footer />
         </body>
       </html>
     );
