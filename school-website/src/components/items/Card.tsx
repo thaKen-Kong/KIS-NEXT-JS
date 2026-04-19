@@ -244,3 +244,42 @@ return (
 </>
 );
 }
+
+type BoxContent = {
+    label : string
+    content : string
+}
+
+
+type TwoRowCardsProps = {
+    left_title? : string
+    left_content? : ReactNode
+    right_title? : string
+    right_content? : ReactNode
+}
+
+
+export function TwoRowCards({left_title, right_title, left_content = [], right_content} : TwoRowCardsProps) {
+    
+    const card_style = "w-50 flex-col flex-1 shadow-xl bg-emerald-800 border-3 border-b-6 border-emerald-950 hover:border-green-900 hover:bg-green-700 duration-300 rounded-lg"
+
+
+    return (
+        <>
+            <div className="gap-4 flex flex-col md:flex-row w-full min-w-0 min-h-100 h-auto shadow-xl rounded-[10px]">
+                {/*LEFT CONTAINER*/}
+                <div className={card_style}>
+                    <Label text={left_title} textColor="text-white"/>
+                    {left_content}
+                </div>
+
+
+                {/*RIGHT CONTAINER*/}
+                <div className={card_style}>
+                    <Label text={right_title} textColor="text-white"/>
+                    {right_content}
+                </div>
+            </div>
+        </>
+    )
+}

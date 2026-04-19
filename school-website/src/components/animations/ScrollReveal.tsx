@@ -65,7 +65,7 @@ export function ScrollReveal({
     filter: isVisible ? "none" : blur ? "blur(20px)" : "none",
     transition: `opacity ${transitionDuration}ms ease-out, transform ${transitionDuration}ms ease-out, filter ${transitionDuration}ms ease-out`,
     willChange: "transform, opacity, filter",
-    ...style,
+    ...style,  
   }
 
   return (
