@@ -261,7 +261,7 @@ type TwoRowCardsProps = {
 
 export function TwoRowCards({left_title, right_title, left_content = [], right_content} : TwoRowCardsProps) {
     
-    const card_style = "w-50 flex-col flex-1 shadow-xl bg-emerald-800 border-3 border-b-6 border-emerald-950 hover:border-green-900 hover:bg-green-700 duration-300 rounded-lg"
+    const card_style = "w-full md:w-50 flex-col flex-1 shadow-xl bg-emerald-800 border-3 border-b-15 border-emerald-950 hover:border-green-950 hover:bg-green-900 duration-300 rounded-lg"
 
 
     return (
